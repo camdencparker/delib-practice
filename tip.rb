@@ -14,11 +14,11 @@
   # join the array
   # return the string
   
-  def capitalize(string)
+  def capitalized(string)
     # str_arr = string.chars
     index = 1
     while index < string.length 
-      string[index] = string[index].capitalize
+      string[index] = string[index].upcase
       index += 2
     end
     # new_str = str_arr.join
@@ -27,4 +27,36 @@
   end
     
 
-  p capitalize("hello, how are your porcupines today?")
+  capitalized("hello, how are your porcupines today?")
+
+  # Given an array of numbers, write a function that returns a new array that contains all numbers from the original array that are less than 100.
+
+# Input: [99, 101, 88, 4, 2000, 50]
+# Output: [99, 88, 4, 50]
+
+# Input: [1000, 1, 100, -10, 10000, 0]
+# Output: [1, -10, 0]
+
+# Create a function less_than_hundred
+# create a less_hundred set equal to an empty arrray
+# create an index set equal to zero
+# loop through the array with a while loop 
+  # check to see if array[index] is less than 100
+    # If true shovel into less_hundred
+    # increment the index by one
+  #return less_hundred
+
+  def less_one_hundred(array)
+    less_hundred = []
+    index = 0
+    while index < array.length
+      if array[index] < 100
+        less_hundred << array[index]
+        
+      end
+      index += 1
+    end
+    less_hundred
+  end
+
+ p less_one_hundred([1000, 1, 100, -10, 10000, 0])
