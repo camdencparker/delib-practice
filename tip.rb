@@ -89,4 +89,18 @@
  end
 end
 
-p fizz_buzz(15)
+p fizz_buzz(30)
+
+# Given an array of numbers, write a function that returns a new array whose values are the original array’s value doubled.
+
+# Input: [4, 2, 5, 99, -4]
+# Output: [8, 4, 10, 198, -8]
+
+# create a function doubled() that takes in an array
+  # use the map method, set block variable to n and then multiply it by 2
+
+  def doubled(array)
+    array.map { |n| n * 2 }
+  end
+
+  p doubled([4, 2, 5, 99, -4])
