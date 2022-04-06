@@ -104,3 +104,21 @@ p fizz_buzz(30)
   end
 
   p doubled([4, 2, 5, 99, -4])
+
+
+# Given a string, write a function that returns true if the “$” character is contained within the string or false if it is not.
+
+# Input: “i hate $ but i love money i know i know im crazy”
+# Output: true
+
+# Input: “abcdefghijklmnopqrstuvwxyz”
+# Output: false
+
+# create a function called contains() that accepts a string
+# use the include method to see if string contains $
+
+def contains(string)
+  string.include?("$")
+end
+
+p contains("abcdefghijklmnopqrstuvwxyz")
