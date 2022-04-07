@@ -14,7 +14,7 @@
   # join the array
   # return the string
   
-  def capitalized(string)
+  def cap(string)
     # str_arr = string.chars
     index = 1
     while index < string.length 
@@ -27,7 +27,7 @@
   end
     
 
-  capitalized("hello, how are your porcupines today?")
+  cap("hello, how are your porcupines today?")
 
   # Given an array of numbers, write a function that returns a new array that contains all numbers from the original array that are less than 100.
 
@@ -122,3 +122,47 @@ def contains(string)
 end
 
 p contains("abcdefghijklmnopqrstuvwxyz")
+
+# Given a string, write a function that returns the first occurence of two duplicate characters in a row, and return the duplicated character.
+
+# Input: “abcdefghhijkkloooop”
+# Output: “h”
+
+
+# Write a function that gives the Nth number of the Fibonacci Sequence. The Fibonacci sequence begins with 0 and 1, and every number thereafter is the sum of the previous two numbers. So the sequence goes like this:
+
+# 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, and so on until infinity...
+
+# Input: 9
+# Output: 21 (as this is the 9th number of the Fibonacci Sequence)
+
+# create a function that accepts a number
+  # create a variable that will represent first num in sequence
+  # create a variable for the second num in sequence
+  # create a count variable
+  # loop while count is less than input number
+  # set variable = to x plus y. This is the fibonacci number
+  # set x equal to y
+  # set y equal to variable 
+  # increment count by 1
+
+
+
+def fibo(n)
+  if n < 3
+    1
+  else
+    x = 1
+    y = 1
+    count = 3
+    while count < n 
+      fibo_num = x + y
+      x = y 
+      y = fibo_num
+      count += 1
+    end
+    fibo_num
+  end
+end
+
+p fibo(10)
