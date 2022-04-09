@@ -223,3 +223,49 @@ p palindrome("baloney")
 
   p contains("ABCDEFG", "ABCXEOG")
   p contains("ABCDEFG", "ABCDEFG")
+
+#   The Collatz Conjecture or 3x+1 problem can be summarized as follows:
+
+# Take any positive integer n. If n is even, divide n by 2 to get n / 2. If n is odd, multiply n by 3 and add 1 to get 3n + 1. Repeat the process indefinitely. The conjecture states that no matter which number you start with, you will always reach 1 eventually.
+
+# Given a number n, return the number of steps required to reach 1.
+
+# Examples
+# Starting with n = 12, the steps would be as follows:
+
+# 12  8
+# 6   4
+# 3   2
+# 10  1
+# 5   
+# 16  
+# 8
+# 4
+# 2
+# 1
+
+# Resulting in 9 steps. So for input n = 12, the return value would be 9.
+
+
+# create a function that accepts a number
+# create a step variable to keep track of the amount of steps it will take
+# use a while loop that until n is equal to 1 will run
+  # if n can be divided by two its even then divide n by 2
+  # if n is odd multiply it by and then add 1 
+  # increment step by 1
+  # return step
+
+  def steps(n)
+    step = 0
+    while n > 1
+      if n % 2 == 0
+        n = n / 2
+      else
+        n = n * 3 + 1
+      end
+      step += 1
+    end
+    step
+  end
+
+  p steps(12)
