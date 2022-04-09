@@ -166,3 +166,27 @@ def fibo(n)
 end
 
 p fibo(10)
+
+# Given a string, write a function that returns true if it is a palindrome, and false if it is not. (A palindrome is a word that reads the same both forward and backward.)
+
+# Input: “racecar”
+# Output: true
+
+# Input: “baloney”
+# Output: false
+
+# create a function that accepts a string
+# use reverse method on string and set to backwards variable
+# check if backwards is equal to string if true return true if false return false
+
+def palindrome(string)
+  backwards = string.reverse
+  if backwards == string
+    true
+  else
+    false
+  end
+end
+
+p palindrome("racecar")
+p palindrome("baloney")
