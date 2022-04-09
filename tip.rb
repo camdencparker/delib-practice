@@ -190,3 +190,36 @@ end
 
 p palindrome("racecar")
 p palindrome("baloney")
+
+# Given two strings of equal length, write a function that returns the number of characters that are different between the two strings.
+
+# Input: "ABCDEFG", "ABCXEOG"
+# Output: 2
+
+# Explanation: While the A, B, C, E, and G are in the same place for both strings, they have different characters in the other spaces. Since there are 2 such spaces that are different (the D and F in the first string), we return 2.
+
+# Input: "ABCDEFG", "ABCDEFG",
+# Output: 0
+
+  #create a funciton that accepts two strings of equal length
+  #create an empty array to house the different characters
+  #create an index variable equal to zero
+  #loop through first string and compare it with the second string
+  #if chars are different push into diff_char array
+  #return length of diff_char array
+  
+  def contains(string1, string2)
+    diff = []
+    index = 0
+    
+    while index < string1.length
+      if string1[index] != string2[index]
+        diff << string2[index]
+      end
+      index += 1
+    end
+    diff.length
+  end
+
+  p contains("ABCDEFG", "ABCXEOG")
+  p contains("ABCDEFG", "ABCDEFG")
