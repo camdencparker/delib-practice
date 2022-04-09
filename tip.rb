@@ -269,3 +269,33 @@ p palindrome("baloney")
   end
 
   p steps(12)
+
+#   Given two arrays of strings, return a new string that contains every combination of a string from the first array concatenated with a string from the second array.
+
+# Input: ["a", "b", "c"], ["d", "e", "f", "g"]
+# Output: ["ad", "ae", "af", "ag", "bd", "be", "bf", "bg", "cd", "ce", "cf", "cg"]
+
+  # create a function that accepts two arrays of strings
+    # create an index variable 
+    # create empty solution array
+    # compare arrays to find longest length 
+    # loop through the longest length array
+    # then loop through the second array
+    # place both array elements into new array as one string
+
+    def combos(array1, array2)
+      index = 0
+      inner = 0
+      solution = []
+      while index < array1.length
+        while inner < array2.length
+          solution << array1[index] + array2[inner]
+          inner += 1
+        end
+        index += 1
+        inner = 0
+      end
+      solution
+    end
+
+   p combos(["a", "b", "c"], ["d", "e", "f", "g"])
