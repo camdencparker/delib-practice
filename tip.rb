@@ -299,3 +299,29 @@ p palindrome("baloney")
     end
 
    p combos(["a", "b", "c"], ["d", "e", "f", "g"])
+
+#    If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+
+# Find the sum of all the multiples of 3 or 5 below 1000.
+
+# create a function that takes in a number
+ # create an array for the multiples of 3 and 5
+ # create an index
+ # use a while loop 
+ # if index divided 3 or 5 has no remainder put into multiples array
+ # increment index by 1
+ # use reduce method to get sum of all multiples array elements
+
+def sum_multiples(n)
+  multiples = []
+  index = 1 
+  while index < n 
+    if index % 3 == 0 || index % 5 == 0
+      multiples << index
+    end
+  index += 1
+  end
+  multiples.reduce(:+)
+end 
+
+p sum_multiples(1000)
