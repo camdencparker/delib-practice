@@ -395,3 +395,18 @@ p Prime.each(number).select{ |n| number % n == 0 }.last
 
 def seperated(arr)
 end
+
+
+# 2) Company would like to know how much inventory exists in their closed inventory compartments. Given a string s consisting of item as "*" and closed compartments as an open and close "|", an array of starting indices, startIndices, and an array of ending indices, endIndices, determine the number of items in closed compartments within the substring between the two indices, inclusive
+
+# An item is represented as an asterisk ("*" = ascii decimal 42)
+# A compartment is represented as a pair of pipes that may or may not have items between them ("|" = ascii decimal 124)
+
+# Example 
+# Input: 
+# s = "|**|*|*"
+# Output:
+# startIndices = [1,1]
+# endIndeces = [5,6]
+
+# The function must return an integer array that contains the results for each of the startIndices[i] and endIndices[i] pairs.
