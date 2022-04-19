@@ -367,3 +367,31 @@ p fibo()
 require 'prime'
 number = 13256 
 p Prime.each(number).select{ |n| number % n == 0 }.last
+
+
+### Amazon Practice Tech Int Questions
+
+## 1)An assoxiate has a set of items that need to be packed into two boxes. Given an integer array of the item weights (arr) to be packed, divide the item weights into two subsets, A and B, for packing into the asssociated boxes, while respecting the following conditions...
+
+# The intersection of A and B is null
+# The union of A and B is equal to the original array
+# The number of elements in subset A is minimal
+# The sum of A's elements is greater than the sum of B's elements
+
+# Return the subset A in increasing order where the sum of A's weights is greater than the sum of B's weights. If more than one subset A exists, return the one with the maximal total weight
+
+# Example
+# n = 5
+# arr = [3,7,5,6,2]
+# There are two subsets in arr that satisfy the conditions for A are [5,7] and [6,7]
+
+
+# A.length + B.length = arr.length
+# A.length < B.length
+# Sum(A) > Sum(B)
+# Elements in A are unique to A and not found in B, vice versa
+
+
+
+def seperated(arr)
+end
